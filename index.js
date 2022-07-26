@@ -1,6 +1,7 @@
 const express= require("express")
 
 const App=express()
+const cors=require("cors")
 
 const persons=[
     { 
@@ -29,6 +30,14 @@ App.get("/",(request,response)=>{
 })
 App.get("/persons",(request,response)=>{
     response.json(persons)
+    
+})
+App.get("/info",(request,response)=>{
+  console.log(response)
+  const date=new Date
+  // const time=
+  response.send(`<h3>Phonebook has information of ${persons.length} people</h3>
+  <h3>${date}</h3>`)
 })
 const port=3001
 App.get("/persons/:id",(req,res)=>{const id=req.params.id
