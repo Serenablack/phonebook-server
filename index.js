@@ -39,9 +39,14 @@ App.get("/info",(request,response)=>{
   response.send(`<h3>Phonebook has information of ${persons.length} people</h3>
   <h3>${date}</h3>`)
 })
-const port=3001
-App.get("/persons/:id",(req,res)=>{const id=req.params.id
-    res.json(persons.id)
-
-})
+App.get("/persons/:id",(req,res)=>{
+  const id=Number(req.params.id)
+  
+  const person=persons.find((x)=> 
+  x.id===id)
+  if (person) res.json(person)
+  else res.status(404).send("No such id found.")
+    
+  })
+  const port=3001
 App.listen(port,()=>{console.log(`Server is running on part ${port}`)})

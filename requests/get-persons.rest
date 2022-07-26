@@ -1,4 +1,4 @@
 GET http://localhost:3001
 ###
-get http://localhost:3001/info
+get http://localhost:3001/persons/7
  ###
