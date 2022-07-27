@@ -1,4 +1,15 @@
 GET http://localhost:3001
 ###
-get http://localhost:3001/persons/7
+Post http://localhost:3001/persons/
+content-type: application/json
+
+    {
+     "name":"Sandhya",
+     "number":"87597597"
+    }
+
+
  ###
+
+
+ 

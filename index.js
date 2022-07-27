@@ -2,7 +2,7 @@ const express= require("express")
 
 const App=express()
 const cors=require("cors")
-
+App.use(express.json())
 const persons=[
     { 
       "id": 1,
@@ -46,7 +46,18 @@ App.get("/persons/:id",(req,res)=>{
   x.id===id)
   if (person) res.json(person)
   else res.status(404).send("No such id found.")
-    
+  })
+  App.post("/persons/",(req,res)=>{
+    const personObj=req.body
+    personObj.id=Math.floor(Math.random()*1000000)
+    persons.push(personObj)
+    res.json(persons)
+  })
+
+  App.delete("/persons/:id",(req,res)=>{
+    const id=Number(req.params.id)
+    const delPerson=persons.filter((x)=>x.id!==id)
+    res.json(delPerson)
   })
   const port=3001
 App.listen(port,()=>{console.log(`Server is running on part ${port}`)})
