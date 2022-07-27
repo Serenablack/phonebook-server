@@ -1,5 +1,5 @@
 {
-  "name": "fullstackopen-server",
+  "name": "phonebook-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Serenablack/fullstackOpen-server.git"
+    "url": "git+https://github.com/Serenablack/phonebook-server.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Serenablack/fullstackOpen-server/issues"
+    "url": "https://github.com/Serenablack/phonebook-server/issues"
   },
-  "homepage": "https://github.com/Serenablack/fullstackOpen-server#readme",
+  "homepage": "https://github.com/Serenablack/phonebook-server#readme",
   "dependencies": {
     "express": "^4.18.1"
   },
