@@ -1,15 +1,17 @@
 GET http://localhost:3001
 ###
-Post http://localhost:3001/persons/
+
+DELETE http://localhost:3001/persons/677622
+###
+POST  http://localhost:3001/persons/
 content-type: application/json
 
     {
-     "name":"Sandhya",
+     "name": "gmer" ,
      "number":"87597597"
     }
 
 
  ###
-
 
  
