@@ -3,6 +3,7 @@ const morgan=require("morgan")
 const App=express()
 const cors=require("cors")
 
+App.use(express.static("build"))
 App.use(cors())
 App.use(express.json())
 App.use(morgan((tokens,req,res)=>{
@@ -81,5 +82,5 @@ App.get("/persons/:id",(req,res)=>{
     res.json(delPerson)
   })
 
-const port=3001
+const port=process.env.PORT || 3001
 App.listen(port,()=>{console.log(`Server is running on part ${port}`)})
