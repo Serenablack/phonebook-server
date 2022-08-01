@@ -1,7 +1,8 @@
-GET http://localhost:3001
+GET http://localhost:3000
+
 ###
 
-DELETE http://localhost:3001/persons/677622
+DELETE http://localhost:3001/persons/292855
 ###
 POST  http://localhost:3001/persons/
 content-type: application/json
