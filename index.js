@@ -127,9 +127,11 @@ App.put("/persons/:id", (req, res, next) => {
     // ,
     // runValidators: true,
     // context: "query",
-  }).then((updatedPerson) => {
-    res.json(updatedPerson);
-  });
+  })
+    .then((updatedPerson) => {
+      res.json(updatedPerson);
+    })
+    .catch((error) => next(error));
 });
 
 const errorHandler = (error, request, response, next) => {
